@@ -1,0 +1,225 @@
+.techStack {
+    padding: 6rem 0;
+    width: 100%;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.techStack::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+    z-index: 0;
+}
+
+.techStackHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.techStackTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--ifm-color-primary);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.techStackSubtitle {
+    font-size: 1.25rem;
+    color: var(--ifm-color-emphasis-700);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.techCard {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+
+.techCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    z-index: -1;
+}
+
+.techCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.techIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.techIcon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 50%;
+}
+
+.techEmoji {
+    font-size: 1.5rem;
+    z-index: 1;
+    position: relative;
+}
+
+.techContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.techName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ifm-color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.techDescription {
+    color: var(--ifm-color-emphasis-700);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.techCategory {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 暗色主题适配 */
+[data-theme='dark'] .techStack {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme='dark'] .techCard {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .techCard::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+[data-theme='dark'] .techStackSubtitle {
+    color: var(--ifm-color-emphasis-600);
+}
+
+[data-theme='dark'] .techDescription {
+    color: var(--ifm-color-emphasis-600);
+}
+
+/* 响应式设计 */
+@media (max-width: 996px) {
+    .techStack {
+        padding: 4rem 0;
+    }
+
+    .techStackTitle {
+        font-size: 2.5rem;
+    }
+
+    .techCard {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .techIcon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .techEmoji {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .techStack {
+        padding: 3rem 0;
+    }
+
+    .techStackTitle {
+        font-size: 2rem;
+    }
+
+    .techStackSubtitle {
+        font-size: 1.1rem;
+    }
+
+    .techCard {
+        padding: 1.25rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .techIcon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .techEmoji {
+        font-size: 1.1rem;
+    }
+
+    .techName {
+        font-size: 1.1rem;
+    }
+
+    .techDescription {
+        font-size: 0.85rem;
+    }
+}
