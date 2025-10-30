@@ -52,7 +52,7 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ title, Svg, description, icon, color }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--4')} style={{marginBottom:'1rem'}}>
       <div className={styles.featureCard}>
         <div className={styles.featureIcon} style={{ backgroundColor: color }}>
           <span className={styles.featureEmoji}>{icon}</span>
