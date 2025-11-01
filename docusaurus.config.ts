@@ -52,7 +52,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/ddz12123/ddz12123.github.io/tree/main/docs/',
+            'https://github.com/ddz12123/ddz12123.github.io/tree/main/',
         },
         // blog: {
         //   showReadingTime: true,
