@@ -105,7 +105,13 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '面试',
+          label: '面经',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tools',
+          position: 'left',
+          label: '工具',
         },
         {
           href: 'https://github.com/ddz12123/ddz12123.github.io',
