@@ -1,6 +1,6 @@
 # vitepress 部署
 
-## 一、Dockerfile
+## 1. Dockerfile
 ```dockerfile
 # 使用官方的 Nginx 镜像作为基础镜像
 FROM nginx:alpine
@@ -25,7 +25,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ```
 
-## 二、nginx.conf
+## 2. nginx.conf
 
 ```nginx
 server {
@@ -59,9 +59,9 @@ server {
 }
 ```
 
-## 三、构建脚本
+## 3. 构建脚本
 
-build.sh
+### 3.1 build.sh
 ```shell
 #!/bin/bash
 #chmod +x build.sh

@@ -1,9 +1,14 @@
 # Uniapp 套壳h5打包app
 
->
-> httpUrl 是你要套壳的的h5网址。onReady中需要修改一下你首页的标题，目的是去除打包后APP首页导航栏的返回按钮。
+## 1. 简介
 
-- [/pages/index/index.vue]
+:::tip 注意
+httpUrl 是你要套壳的的h5网址。onReady中需要修改一下你首页的标题，目的是去除打包后APP首页导航栏的返回按钮。
+:::
+
+## 2. 实现代码
+
+### 2.1 pages/index/index.vue
 
 ```vue [/pages/index/index.vue]
 

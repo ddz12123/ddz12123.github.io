@@ -2,7 +2,7 @@
 
 ## 1. 使用Dockerfile部署
 
-### 多阶段构建Dockerfile
+### 1.1 多阶段构建Dockerfile
 ```dockerfile
 # 构建阶段
 FROM node:18-alpine as build-stage
@@ -20,7 +20,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-### Nginx配置示例 (nginx.conf)
+### 1.2 Nginx配置示例 (nginx.conf)
 ```nginx
 server {
     listen 80;
@@ -39,7 +39,7 @@ server {
 }
 ```
 
-构建并运行命令：
+### 1.3 构建并运行命令
 ```bash
 docker build -t vue-app .
 docker run -d -p 8080:80 vue-app
@@ -47,7 +47,7 @@ docker run -d -p 8080:80 vue-app
 
 ## 2. 使用docker-compose部署
 
-### docker-compose.yml示例
+### 2.1 docker-compose.yml示例
 ```yaml
 version: '3.8'
 
@@ -72,7 +72,7 @@ services:
       - frontend
 ```
 
-启动命令：
+### 2.2 启动命令
 ```bash
 docker-compose up -d
 ```

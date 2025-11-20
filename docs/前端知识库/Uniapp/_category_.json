@@ -1,8 +1,13 @@
 {
-  "label": "uni-app",
-  "position":1,
+  "label": "Uni-app跨平台开发",
+  "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "uni-app汇总"
+    "description": "Uni-app跨平台开发实战指南，包含鉴权、打包、UI组件等完整解决方案",
+    "slug": "/category/uniapp-development"
+  },
+  "customProps": {
+    "icon": "📱",
+    "keywords": ["Uni-app", "跨平台", "小程序", "App开发", "Vue"]
   }
 }

@@ -1,0 +1,13 @@
+{
+  "label": "Docker容器化部署",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Docker容器化部署方案汇总，包含Docker Compose、Vue项目容器化部署等实用指南",
+    "slug": "/category/docker-deployment"
+  },
+  "customProps": {
+    "icon": "🐳",
+    "keywords": ["Docker", "容器化", "部署", "Docker Compose", "Vue部署"]
+  }
+}

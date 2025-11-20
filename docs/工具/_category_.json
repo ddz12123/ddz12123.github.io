@@ -1,0 +1,8 @@
+{
+  "label": "工具集",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "开发过程中常用的工具、插件和资源集合，包括图床工具、文档生成器、Vue插件、图标库等。"
+  }
+}

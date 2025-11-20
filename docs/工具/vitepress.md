@@ -1,9 +1,16 @@
-# vitepress相关配置
+# VitePress 相关配置
 
+:::tip 简介
+VitePress 是一个基于 Vue 的静态网站生成器，专为构建技术文档而设计。它提供了现代化的开发体验和丰富的功能，是替代传统文档工具的理想选择。
+:::
 
 ## 一、默认主题样式调整
 
- 自定义主题样式.vitepress/theme/reset.css
+:::info 应用场景
+通过自定义 CSS 样式，可以调整 VitePress 默认主题的外观，使其更符合项目需求。
+:::
+
+在 `.vitepress/theme/reset.css` 文件中添加以下样式：
 
 ```css
 /* 将搜索框靠右显示 */
@@ -12,7 +19,6 @@
   flex-direction: row-reverse !important;
   margin-right: 20px;
 }
-
 
 :root {
   --vp-layout-max-width: 1600px !important;
@@ -24,16 +30,13 @@
   background-color: #fff !important;
 }
 
-
 .dark{
   --vp-c-bg-alt: #161618;
 }
 
-
 .dark .VPSidebar{
   background-color: #161618 !important;
 }
-
 
 .open{
   top:0 !important;
@@ -93,49 +96,51 @@
   background: #9e9b9b; /* 滑块悬停时的背景颜色 */
   cursor: pointer;
 }
-
-/* .vitepress-demo-preview-description__handle-btn{
-  display:flex;
-  justify-content: flex-end !important;
-  padding-right: 20px;
-} */
 ```
 
-##  二、本地搜索修改为中文 
+## 二、本地搜索修改为中文
+
+:::info 配置说明
+将 VitePress 的本地搜索功能修改为中文界面，提升用户体验。
+:::
+
+在 `themeConfig` 中添加以下配置：
 
 ```json
-themeConfig:{
-    search: {
-      provider: 'local',
-      options: {
-        translations: {
-          button: {
-            buttonText: '搜索文档',
-            buttonAriaLabel: '搜索文档'
-          },
-          modal: {
-            noResultsText: '无法找到相关结果',
-            resetButtonTitle: '清除查询条件',
-            footer: {
-              selectText: '选择',
-              navigateText: '切换',
-              closeText: '关闭'
-            }
+{
+  "search": {
+    "provider": "local",
+    "options": {
+      "translations": {
+        "button": {
+          "buttonText": "搜索文档",
+          "buttonAriaLabel": "搜索文档"
+        },
+        "modal": {
+          "noResultsText": "无法找到相关结果",
+          "resetButtonTitle": "清除查询条件",
+          "footer": {
+            "selectText": "选择",
+            "navigateText": "切换",
+            "closeText": "关闭"
           }
         }
       }
     }
+  }
 }
-
 ```
 
-## 三、项目defineConfig配置
+## 三、项目 defineConfig 配置
 
-.vitepress/config.mts
+:::tip 配置文件
+在 `.vitepress/config.mts` 文件中进行项目的基本配置，包括标题、导航、侧边栏等。
+:::
 
 ```js
 import { defineConfig } from "vitepress";
 import { withPwa } from '@vite-pwa/vitepress'
+
 // https://vitepress.dev/reference/site-config
 export default withPwa(defineConfig({
   title: "知识库",
@@ -172,6 +177,7 @@ export default withPwa(defineConfig({
             { text: 'cdn', link: '/src/web/comprehensive/cdn' },
           ]
         }
+      ]
     },
 
     socialLinks: [
@@ -275,41 +281,32 @@ export default withPwa(defineConfig({
     },
   }
 }))
+```
 
 ```
 
 
-## 四、itepress-theme-demoblock插件
-demo组件
-https://www.npmjs.com/package/vitepress-theme-demoblock-fork
+## 四、vitepress-theme-demoblock 插件
 
+:::info 插件介绍
+vitepress-theme-demoblock 是一个用于 VitePress 的插件，可以方便地在文档中展示 Vue 组件示例和代码。
+:::
 
-## 五、theme/index.js
+- **插件地址**: [vitepress-theme-demoblock-fork](https://www.npmjs.com/package/vitepress-theme-demoblock-fork)
+
+## 五、主题自定义配置
+
+:::tip 自定义主题
+通过创建自定义主题文件，可以进一步扩展 VitePress 的功能，例如添加 Live2D 宠物等交互元素。
+:::
+
+在 `.vitepress/theme/index.js` 文件中添加以下配置：
+
 ```js
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import './css/reset.css'
-//import { loadOml2d } from 'oh-my-live2d';
-
-
 import MyLayout from './Layout.vue'
-
-
-//https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
-//https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json
-//https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json
-//https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json
-//https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json
-//https://unpkg.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json
-//https://unpkg.com/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json
-//https://unpkg.com/live2d-widget-model-nico@1.0.5/assets/nico.model.json
-//https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json
-//https://unpkg.com/live2d-widget-model-izumi@1.0.5/assets/izumi.model.json
-//https://unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json
-//https://unpkg.com/live2d-widget-model-nito@1.0.5/assets/nito.model.json
-
-//https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/waifu-tips.json
-
 
 export default {
   extends: DefaultTheme,
@@ -381,3 +378,24 @@ export default {
   Layout: MyLayout
 };
 ```
+
+:::note Live2D 模型
+以下是可用的 Live2D 模型链接，可以根据需要选择：
+
+- hijiki: `https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json`
+- tororo: `https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json`
+- koharu: `https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json`
+- chitose: `https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json`
+- shizuku: `https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json`
+- hibiki: `https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json`
+- wanko: `https://unpkg.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json`
+- unitychan: `https://unpkg.com/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json`
+- nico: `https://unpkg.com/live2d-widget-model-nico@1.0.5/assets/nico.model.json`
+- izumi: `https://unpkg.com/live2d-widget-model-izumi@1.0.5/assets/izumi.model.json`
+- nipsilon: `https://unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json`
+- nito: `https://unpkg.com/live2d-widget-model-nito@1.0.5/assets/nito.model.json`
+:::
+
+:::warning 性能考虑
+Live2D 插件可能会影响页面加载性能，建议在生产环境中谨慎使用，并确保有足够的延迟加载时间。
+:::

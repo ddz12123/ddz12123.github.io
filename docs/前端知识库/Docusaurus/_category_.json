@@ -1,0 +1,13 @@
+{
+  "label": "Docusaurus文档站",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Docusaurus静态网站生成器部署和配置指南，包含GitHub Pages部署等实用教程",
+    "slug": "/category/docusaurus-guide"
+  },
+  "customProps": {
+    "icon": "📚",
+    "keywords": ["Docusaurus", "静态网站", "GitHub Pages", "部署", "文档站"]
+  }
+}
