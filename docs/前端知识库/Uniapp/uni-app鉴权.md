@@ -4,7 +4,7 @@ description: Uni-app完整鉴权解决方案，包含登录验证、权限控制
 keywords: [Uni-app, 鉴权, 登录验证, 权限控制, 白名单]
 ---
 
-# 🔐 Uni-app 鉴权系统
+# Uni-app 鉴权系统
 
 ## 📋 概述
 
