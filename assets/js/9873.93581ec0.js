@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkfontend_doc=globalThis.webpackChunkfontend_doc||[]).push([[9873],{9873:(n,o,c)=>{c.r(o)}}]);
