@@ -1,5 +1,5 @@
 {
-  "label": "Uni-app跨平台开发",
+  "label": "\uD83D\uDCBBUni-app跨平台开发",
   "position": 3,
   "link": {
     "type": "generated-index",
@@ -7,7 +7,7 @@
     "slug": "/category/uniapp-development"
   },
   "customProps": {
-    "icon": "📱",
+    "icon": " \uD83D\uDCF1",
     "keywords": ["Uni-app", "跨平台", "小程序", "App开发", "Vue"]
   }
 }

@@ -4,19 +4,14 @@ description: Docker Compose完整使用指南，包含YAML配置、常用命令�
 keywords: [Docker Compose, 容器编排, YAML配置, Docker命令]
 ---
 
-# 🐳 Docker Compose 使用指南
+# Docker Compose 使用指南
 
-## 📋 概述
+##  一、概述
 
 Docker Compose 是一个用于定义和运行多容器Docker应用程序的工具。通过YAML文件配置应用服务，可以轻松实现一键部署，是开发环境和生产环境部署的利器。
 
-### 🎯 核心优势
-- **简化部署**：一条命令启动整个应用栈
-- **环境一致性**：开发、测试、生产环境配置统一
-- **服务编排**：轻松管理多个相互依赖的服务
-- **可移植性**：配置即代码，便于分享和版本控制
 
-## 🏗️ YAML文件结构详解
+##  二、YAML文件结构详解
 ```yaml
 version: '3.8'  # Docker Compose文件版本
 
@@ -62,7 +57,7 @@ volumes:
 | `environment` | 环境变量 | `POSTGRES_PASSWORD: example` |
 | `restart` | 重启策略 | `unless-stopped` |
 
-## ⚡ 常用命令大全
+## ⚡ 三、常用命令大全
 ```bash
 # 🚀 服务管理命令
 docker-compose up -d       # 启动服务(后台运行)
@@ -88,9 +83,9 @@ docker-compose pull        # 拉取镜像
 docker-compose build       # 构建镜像
 ```
 
-## 💡 最佳实践与技巧
+## 💡 四、最佳实践与技巧
 
-### 🎯 环境分离
+###  环境分离
 建议为不同环境创建不同的Compose文件：
 ```bash
 # 开发环境
@@ -100,7 +95,7 @@ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
-### 🔄 健康检查
+### 健康检查
 为服务添加健康检查配置：
 ```yaml
 services:
@@ -113,14 +108,6 @@ services:
       retries: 3
 ```
 
-### 📋 常见问题排查
-
-| 问题 | 解决方案 |
-|------|----------|
-| 端口冲突 | 修改`ports`配置或使用不同端口 |
-| 权限问题 | 检查文件权限，使用`user: root` |
-| 网络连接失败 | 检查服务依赖关系和启动顺序 |
-| 卷数据丢失 | 使用命名卷而非绑定挂载 |
 
 ## 🔗 相关资源
 
